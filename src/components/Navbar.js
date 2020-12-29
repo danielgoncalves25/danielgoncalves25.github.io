@@ -1,12 +1,12 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import resume from "../assets/CS_resume(fall2020).pdf";
+import res from "../assets/resume.pdf";
 
 const NavBar = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
-      <Navbar.Brand id="name" href="/">
-        Daniel Goncalves
+    <Navbar collapseOnSelect expand="lg" fixed="top">
+      <Navbar.Brand id="name" href="#home">
+        <h3>Daniel Goncalves</h3>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse
@@ -14,18 +14,20 @@ const NavBar = () => {
         className="justify-content-end"
       >
         <Nav>
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href={resume} target="_blank" eventKey={2}>
-            Resume
+          <Nav.Link id="grey" href="#home">
+            <p>Home</p>
           </Nav.Link>
-          <Nav.Link eventKey={3} href="/projects">
-            Projects
+          <Nav.Link id="grey" href={res} target="_blank" eventKey={2}>
+            <p>Resume</p>
           </Nav.Link>
-          <Nav.Link eventKey={4} href="/about">
-            About Me
+          <Nav.Link eventKey={3} id="grey" href="#projects">
+            <p>Projects</p>
           </Nav.Link>
-          <Nav.Link eventKey={5} href="/contact">
-            Contact
+          <Nav.Link id="grey" eventKey={4} href="#about">
+            <p>About</p>
+          </Nav.Link>
+          <Nav.Link eventKey={5} id="grey" href="#contact">
+            <p>Contact</p>
           </Nav.Link>
         </Nav>
       </Navbar.Collapse>

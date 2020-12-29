@@ -4,19 +4,25 @@ import Home from "./components/Home";
 import ProjectList from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import { Route, BrowserRouter as Router } from "react-router-dom";
+// import { Route, BrowserRouter as Router } from "react-router-dom";
+
+import SmoothScroll from "smooth-scroll";
+// import SlideShow from "./components/SlideShow";
 
 function App() {
+  var scroll = new SmoothScroll('a[href*="#"]', { speed: 1000 });
+
   return (
-    <div className="App">
-      <Router>
+    <>
+      <div className="App">
         <NavBar />
-        <Route path="/" exact component={Home} />
-        <Route path="/projects" exact component={ProjectList} />
-        <Route path="/about" exact component={About} />
-        <Route path="/contact" exact component={Contact} />
-      </Router>
-    </div>
+        <Home />
+        <ProjectList />
+        <About />
+        <Contact />
+        {/* <SlideShow /> */}
+      </div>
+    </>
   );
 }
 
