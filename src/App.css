@@ -61,20 +61,24 @@ p {
   justify-items: center;
   width: 100%;
   height: max-content;
-  background: #111111;
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 1rem;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
-
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1230px) {
   .project-list {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .project-list {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 .project-container {
-  width: 90%;
+  width: 80%;
   height: 400px;
 }
 .project {
@@ -93,15 +97,34 @@ p {
   backface-visibility: hidden;
 }
 .project-back {
-  position: relative;
+  position: absolute;
   color: white;
+  transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  transform: rotateY(180deg);
   justify-content: center;
   align-items: center;
 }
+.project-back .back-info {
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.back-info Button {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
 
+.project-back a {
+  transition: all 1s ease;
+}
+.project-back a:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
 #name {
   color: rgb(177, 168, 168);
   transition: all 0.5s ease;
@@ -110,14 +133,6 @@ p {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
-}
-.project-back a {
-  transition: all 1s ease;
-}
-.project-back a:hover {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
 }
 .images {
   position: absolute;
@@ -131,6 +146,7 @@ p {
 .project-front {
   border-radius: 1rem;
   background-position: center;
+  object-fit: cover;
   background-size: cover;
 }
 
@@ -142,14 +158,11 @@ p {
   position: relative;
 }
 .about-text {
-  width: auto;
-  /* position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+  width: 80%;
+  margin: auto;
 }
 .about-container {
-  height: 300px;
+  height: auto;
 }
 .contact-container {
   height: 500px;
