@@ -8,7 +8,7 @@ const NavBar = () => {
       <Navbar.Brand id="name" href="#home">
         <h3>Daniel Goncalves</h3>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
       <Navbar.Collapse
         id="responsive-navbar-nav"
         className="justify-content-end"
