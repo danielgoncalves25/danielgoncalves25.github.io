@@ -1,12 +1,13 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import { FaPython, FaImdb, FaReact } from "react-icons/fa";
-import { SiFlutter, SiJavascript, SiFirebase,SiBootstrap } from "react-icons/si";
+import { SiFlutter, SiFirebase,SiBootstrap } from "react-icons/si";
 
 import coc from "../assets/coc.png";
 import expense from "../assets/expense.png";
 import movie from "../assets/movies.png";
 import shoes from "../assets/shoes.png";
+import zoom from "../assets/zoom.png";
 
 // import SlideShow from "./SlideShow";
 // const description =
@@ -19,7 +20,7 @@ const projects = [
     imgPath: coc,
     url: "https://github.com/danielgoncalves25/coc-app",
     liveUrl: null,
-    images: [<SiFlutter size="2rem" />, <FaPython size="2rem" />],
+    images: [<SiFlutter size="2rem" />],
   },
   {
     name: "Expense Budget App",
@@ -46,13 +47,24 @@ const projects = [
   {
     name: "Shoe E-commerece App",
     desc:
-      "Allows users to shop, and add shoes to cart for checkout. Users will be required to login or register before shopping. Mobile application built using Flutter, and Firebase.",
+      "Allows users to shop, and add shoes to cart for checkout. Users will be required to login or register before shopping. Mobile application built using Flutter, Firebase, and Sneaker Database API.",
     imgPath: shoes,
     url: "https://github.com/danielgoncalves25/shoes-shop",
     liveUrl: null,
     images: [
       <SiFlutter size="2rem" />,
       <SiFirebase size="2rem" />,
+    ],
+  },
+  {
+    name: "Zoom Automation",
+    desc:
+      "A simple automation script to join a zoom meeting. This was built using Python and Selenium.",
+    imgPath: zoom,
+    url: "https://github.com/danielgoncalves25/zoom-automation",
+    liveUrl: null,
+    images: [
+      <FaPython size="2rem" />,
     ],
   },
 ];
@@ -108,7 +120,6 @@ const Project = (props) => {
 
 const ProjectList = () => {
   return (
-    <>
       <section id="projects">
         <h1 id="title"> My Projects </h1>
         <div className="project-list">
@@ -117,7 +128,6 @@ const ProjectList = () => {
           })}
         </div>
       </section>
-    </>
   );
 };
 
