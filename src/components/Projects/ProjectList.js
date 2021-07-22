@@ -1,18 +1,15 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import Project from './component/Project';
 import { FaPython, FaImdb, FaReact } from "react-icons/fa";
 import { SiFlutter, SiFirebase,SiBootstrap } from "react-icons/si";
 
-import coc from "../assets/coc.png";
-import expense from "../assets/expense.png";
-import movie from "../assets/movies.png";
-import shoes from "../assets/shoes.png";
-import zoom from "../assets/zoom.png";
+import coc from "../../assets/coc.png";
+import expense from "../../assets/expense.png";
+import movie from "../../assets/movies.png";
+import shoes from "../../assets/shoes.png";
+import zoom from "../../assets/zoom.png";
 
-// import SlideShow from "./SlideShow";
-// const description =
-//   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley oftype and scrambled it to make a type specimen book. It has survived not only five centuries, but also";
-const projects = [
+const allProjects = [
   {
     name: "Clash of Clans Tracker",
     desc:
@@ -69,61 +66,12 @@ const projects = [
   },
 ];
 
-const Project = (props) => {
-  const { name, desc, imgPath, url, images, liveUrl } = props;
-  return (
-    <div className="project-container">
-      <p id='grey'> {name} </p>
-      <div className="project">
-        <div
-          className="project-front"
-          style={{
-            backgroundImage: `url(${imgPath})`,
-          }}
-        >
-          
-        </div>
-        <div className="project-back">
-          <div className="back-info">
-            <p id="grey">{desc}</p>
-            <Button
-              href={url}
-              target="_blank"
-              size="lg"
-              variant="outline-light"
-            >
-              View Source Code
-            </Button>
-            {liveUrl == null ? (
-              <div> </div>
-            ) : (
-              <Button
-                href={liveUrl}
-                target="_blank"
-                size="lg"
-                variant="outline-light"
-              >
-                Live Demo
-              </Button>
-            )}
-          </div>
-          <span className="images">
-            {images.map((img) => {
-              return img;
-            })}
-          </span>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const ProjectList = () => {
   return (
       <section id="projects">
         <h1 id="title"> My Projects </h1>
         <div className="project-list">
-          {projects.map((project) => {
+          {allProjects.map((project) => {
             return <Project key={project.name} {...project} />;
           })}
         </div>
