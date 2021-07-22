@@ -2,8 +2,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 
 
-const Project = (props) => {
-  const { name, desc, imgPath, url, images, liveUrl } = props;
+const Project = ({ name, desc, imgPath, url, images, liveUrl }) => {
   return (
     <div className="project-container">
       <p id='grey'> {name} </p>
@@ -19,26 +18,29 @@ const Project = (props) => {
         <div className="project-back">
           <div className="back-info">
             <p id="grey">{desc}</p>
+            <div className="buttons-flex">
+
             <Button
               href={url}
               target="_blank"
-              size="lg"
+              size="md"
               variant="outline-light"
             >
               View Source Code
             </Button>
-            {liveUrl == null ? (
-              <div> </div>
-            ) : (
+            
+            {liveUrl && (
               <Button
                 href={liveUrl}
                 target="_blank"
-                size="lg"
+                size="md"
                 variant="outline-light"
               >
                 Live Demo
               </Button>
             )}
+
+            </div>
           </div>
           <span className="images">
             {images.map((img) => {

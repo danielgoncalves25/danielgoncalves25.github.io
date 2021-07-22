@@ -146,6 +146,15 @@ p {
 .images svg {
   margin-right: 10px;
 }
+.buttons-flex {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+.buttons-flex a {
+  height: 40px
+}
 
 .project-front {
   border-radius: 1rem;
