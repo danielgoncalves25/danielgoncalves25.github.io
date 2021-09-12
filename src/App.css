@@ -138,12 +138,18 @@ p {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
 }
-.images {
+.photo-image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+.tech-images {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.images svg {
+.tech-images svg {
   margin-right: 10px;
 }
 .buttons-flex {
@@ -153,7 +159,7 @@ p {
   justify-content: space-around;
 }
 .buttons-flex a {
-  height: 40px
+  height: 40px;
 }
 
 .project-front {

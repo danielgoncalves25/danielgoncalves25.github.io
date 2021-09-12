@@ -4,25 +4,25 @@ import Home from "./components/Home";
 import ProjectList from "./components/Projects/ProjectList";
 import About from "./components/About";
 import Contact from "./components/Contact";
-// import { Route, BrowserRouter as Router } from "react-router-dom";
+import SlideShow from "./components/SlideShow";
+import { ProjectProvider } from "./service";
 
 import SmoothScroll from "smooth-scroll";
-// import SlideShow from "./components/SlideShow";
 
 function App() {
   var scroll = new SmoothScroll('a[href*="#"]', { speed: 1000 });
 
   return (
-    <>
+    <ProjectProvider>
       <div className="App">
         <NavBar />
         <Home />
         <ProjectList />
         <About />
         <Contact />
-        {/* <SlideShow /> */}
+        <SlideShow />
       </div>
-    </>
+    </ProjectProvider>
   );
 }
 
