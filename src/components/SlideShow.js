@@ -12,20 +12,12 @@ const SlideShow = () => {
     <Modal show={isModal} onHide={() => setIsModal(false)} size="lg">
       <Modal.Body>
         <Carousel>
-          <Carousel.Item className="project-front">
-            <img className="w-100" src={zoom} alt="First slide" />
-            <Carousel.Caption>
-              <h3>First slide label</h3>
-              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption>
+          <Carousel.Item className="carousel">
+            <img className="" src={zoom} alt="First slide" />
           </Carousel.Item>
-          <Carousel.Item className="project-front">
-            <img className="w-100" src={shoes} alt="Second slide" />
 
-            <Carousel.Caption>
-              <h3>Second slide label</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </Carousel.Caption>
+          <Carousel.Item className="carousel">
+            <img className="" src={shoes} alt="Second slide" />
           </Carousel.Item>
         </Carousel>
       </Modal.Body>

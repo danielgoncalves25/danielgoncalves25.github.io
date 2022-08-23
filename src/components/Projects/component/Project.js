@@ -47,9 +47,9 @@ const Project = ({ name, desc, imgPath, url, images, liveUrl }) => {
               return img;
             })}
           </span>
-          <span className="photo-image" onClick={() => setIsModal(true)}>
+          {/* <span className="photo-image" onClick={() => setIsModal(true)}>
             <BiPhotoAlbum size="2rem" />
-          </span>
+          </span> */}
         </div>
       </div>
     </div>
