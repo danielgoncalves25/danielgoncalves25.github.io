@@ -1,6 +1,6 @@
 {
-  "homepage": "www.daniel-goncalves.com",
-  "name": "danielgoncalves25.github.io",
+  "homepage": "https://daniel-goncalves.com/",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b test-main -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
