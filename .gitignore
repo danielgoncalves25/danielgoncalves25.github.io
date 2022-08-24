@@ -4,6 +4,7 @@ node_modules
 /src/assets
 /src/service/keys.js
 
+
 # dependencies
 /node_modules
 /.pnp
