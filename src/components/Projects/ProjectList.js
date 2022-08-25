@@ -1,13 +1,15 @@
 import React from "react";
 import Project from "./component/Project";
-import { FaPython, FaImdb, FaReact } from "react-icons/fa";
-import { SiFlutter, SiFirebase, SiBootstrap } from "react-icons/si";
+import { FaPython, FaImdb, FaReact  } from "react-icons/fa";
+import { SiFlutter, SiFirebase, SiBootstrap, SiJavascript } from "react-icons/si";
 
 import coc from "../../assets/coc.png";
 import expense from "../../assets/expense.png";
 import movie from "../../assets/movies.png";
 import shoes from "../../assets/shoes.png";
 import zoom from "../../assets/zoom.png";
+import mario from "../../assets/mario.png";
+import three from "../../assets/threedotjs.svg";
 
 const allProjects = [
   {
@@ -53,6 +55,14 @@ const allProjects = [
     url: "https://github.com/danielgoncalves25/zoom-automation",
     liveUrl: null,
     images: [<FaPython size="2rem" />],
+  },
+  {
+    name: "Super Mario Bros (mini)",
+    desc: "I created this during Fall 2021 semester for Computer Graphics final project. I ultized HTML, CSS, Three.js, and Tween.js which is an animation libray. The game include a lot of physics, and collision detection.",
+    imgPath: mario,
+    url: "https://github.com/danielgoncalves25/cs460student/tree/main/final",
+    liveUrl: "https://www.daniel-goncalves.com/cs460student/final/",
+    images: [<SiJavascript  size="2rem" />, <img src={three} className="fill-white"/>],
   },
 ];
 
