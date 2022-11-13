@@ -195,11 +195,29 @@ p {
   height: 500px;
   margin-bottom: 50px;
 }
+.toast-container {
+  margin: auto;
+  width: 50%;
+}
+.toast-body {
+  display: flex;
+  justify-content: space-between;
+}
 .form-container {
   display: flex;
   justify-content: center;
 }
-
 .form-group{
   width: 350px;
+}
+.footer-container {
+  background: #232222;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+}
+
+.footer-container svg:hover {
+  cursor: pointer
 }

@@ -62,7 +62,7 @@ const allProjects = [
     imgPath: mario,
     url: "https://github.com/danielgoncalves25/cs460student/tree/main/final",
     liveUrl: "https://www.daniel-goncalves.com/cs460student/final/",
-    images: [<SiJavascript  size="2rem" />, <img src={three} className="fill-white"/>],
+    images: [<SiJavascript  size="2rem" />, <img src={three} alt="" className="fill-white"/>],
   },
 ];
 

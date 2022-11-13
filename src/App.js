@@ -8,6 +8,7 @@ import SlideShow from "./components/SlideShow";
 import { ProjectProvider } from "./service";
 
 import SmoothScroll from "smooth-scroll";
+import Footer from "./components/Footer";
 
 function App() {
   var scroll = new SmoothScroll('a[href*="#"]', { speed: 1000 });
@@ -21,6 +22,7 @@ function App() {
         <About />
         <Contact />
         <SlideShow />
+        <Footer />
       </div>
     </ProjectProvider>
   );
